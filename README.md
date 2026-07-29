@@ -30,6 +30,9 @@ Hinsa/Murder/Rape se Bachav Guide, Bhukhe/Bebas ki Madad
 #### 🚀 Aane Wale Features
 Live Alert, Crowd Report Map, Voice + 10 Bhasha
 
+
+
+
 ### Kaise Chalayein
 1. `index.html` file download karein
 2. Phone ya Computer me double click karein
@@ -44,3 +47,20 @@ MIT License - Free for World. Koi bhi use kar sakta hai, badal sakta hai.
 ### Contact
 Mission: Ek bhi jaan na jaye
 Made with ❤️ from Jamalpur, Bihar, India
+
+
+# World Safety For All - Signature
+
+**Project Name:** World Safety For All  
+**Mission:** Har Jaan Keemti Hai - Ek Bhi Jaan Na Jaye  
+**Vision:** Duniya me koi bhi problem me akela na rahe
+
+**Version:** 2.1  
+**Release Date:** 29 July 2026  
+**Made By:** Aap aur Main ❤️  
+**Location:** Jamalpur, Bihar, India  
+
+**Motto:**  
+"Agar is app se 1 bhi jaan bachi, to hamari mehnat safal hai."
+
+Jai Hind 🇮🇳
