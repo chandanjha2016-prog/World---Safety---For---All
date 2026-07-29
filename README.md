@@ -44,6 +44,12 @@ Sirf HTML + CSS + JavaScript. Koi server nahi.
 ### License
 MIT License - Free for World. Koi bhi use kar sakta hai, badal sakta hai.
 
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Matlab:** Koi bhi isko free me use kare, share kare, apne desh ke liye badle. 
+Bas credit dena mat bhoolna: "World Safety For All"
+
 ### Contact
 Mission: Ek bhi jaan na jaye
 Made with ❤️ from Jamalpur, Bihar, India
