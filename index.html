@@ -1,1 +1,111 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Safety For All 🌍</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+  body{background:#e6f7ff;text-align:center;padding:10px;}
+  h1{color:#004aad;margin:10px 0;font-size:24px;}
+.tagline{color:#d00000;margin-bottom:15px;font-weight:bold;}
+.section-title{margin:15px 0 5px;color:#003366;font-weight:bold;font-size:15px;}
+.btn{width:92%;padding:16px;margin:6px auto;font-size:16px;border:none;border-radius:12px;color:white;cursor:pointer;display:block;transition:0.2s;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.btn:active{transform:scale(0.96);}
+.danger{background:#e63946;}.safe{background:#2a9d8f;}.guide{background:#f4a261;}
+.help{background:#8338ec;}.weather{background:#457b9d;}.nadi{background:#1d3557;}
+.social{background:#6a4c93;}.future{background:#adb5bd;}
+  #guideBox{display:none;text-align:left;background:white;padding:15px;margin:15px;border-radius:10px;box-shadow:0 0 10px #ccc;white-space:pre-line;}
+  footer{font-size:12px;color:#555;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<h1>🌍 World Safety For All</h1>
+<p class="tagline">Har Jaan Keemti Hai - Ek Bhi Jaan Na Jaye</p>
+
+<!-- TURANT MADAD -->
+<p class="section-title">🚨 Turant Madad - 24x7</p>
+<button class="btn danger" onclick="call('112')">Police + Emergency - 112</button>
+<button class="btn danger" onclick="call('108')">Ambulance - 108</button>
+<button class="btn danger" onclick="call('181')">Women Helpline - 181</button>
+<button class="btn help" onclick="helpMe()">💜 Mujhe Madad Chahiye</button>
+
+<!-- MAUSAM -->
+<p class="section-title">⛈️ Mausam aur Prakritik Khatra</p>
+<button class="btn weather" onclick="showGuide('aandhi')">🌪️ Aandhi Toofan</button>
+<button class="btn weather" onclick="showGuide('olawrishti')">🧊 Olawrishti</button>
+<button class="btn weather" onclick="showGuide('heavyrain')">🌧️ Heavy Rain + Baadh</button>
+<button class="btn weather" onclick="showGuide('sookha')">🏜️ Sookha / Garmi</button>
+<button class="btn weather" onclick="showGuide('drain')">🚧 Drain Blockage / Water Logging</button>
+
+<!-- NADI -->
+<p class="section-title">🌊 Nadi aur Paani ki Suraksha</p>
+<button class="btn nadi" onclick="showGuide('ganga')">Ganga - Dirty/Clean + Safety</button>
+<button class="btn nadi" onclick="showGuide('yamuna')">Yamuna - Clean Status + Safety</button>
+<button class="btn nadi" onclick="showGuide('drowning')">💧 Doobne se Bachav</button>
+<button class="btn nadi" onclick="showGuide('boat')">⛵ Boat/Ship Doobna</button>
+
+<!-- DUSRE KHATRE -->
+<p class="section-title">⚠️ Manav aur Accident Khatra</p>
+<button class="btn guide" onclick="showGuide('earthquake')">🌍 Bhukamp Guide</button>
+<button class="btn guide" onclick="showGuide('borewell')">🕳️ Borewell me Bachha</button>
+<button class="btn guide" onclick="showGuide('surang')">⛰️ Surang / Malba me Fansna</button>
+<button class="btn guide" onclick="showGuide('accident')">🚗 Road Accident</button>
+
+<!-- SAMAJIK -->
+<p class="section-title">🤝 Samajik Suraksha</p>
+<button class="btn social" onclick="showGuide('violence')">🛡️ Hinsa / Murder / Rape se Bachav</button>
+<button class="btn social" onclick="showGuide('bhikhmanga')">🍞 Bhukhe / Bebas ki Madad</button>
+
+<!-- SAFE CHECK -->
+<button class="btn safe" onclick="getLocation()">📍 Meri Location Safe Hai?</button>
+
+<!-- FUTURE -->
+<p class="section-title">🚀 Aane Wale Features</p>
+<button class="btn future" onclick="alert('Live Weather + Nadi Level API jald')">📡 Live Alert System</button>
+<button class="btn future" onclick="alert('Photo se Blockage Report jald')">🗺️ Crowd Report Map</button>
+<button class="btn future" onclick="alert('10 Bhasha + Voice jald')">🗣️ Voice + Multi Language</button>
+
+<!-- GUIDE BOX -->
+<div id="guideBox"></div>
+
+<footer>
+  <hr>
+  <p><b>Disclaimer:</b> World Safety For All sirf jankari aur helpline ke liye hai. Emergency me 112 call karein.</p>
+  <p>World Safety For All Team | Mission: Ek bhi jaan na jaye | 29 July 2026</p>
+</footer>
+
+<script>
+function call(num){ window.location.href = 'tel:' + num; }
+function helpMe(){ alert("Aap akeli nahi hain.\n\n1. Baat karein: AASRA 91-9820466726\n2. National Helpline: 14416\n3. Kisi apne se baat karein."); }
+function showGuide(type){
+  const guides = {
+    aandhi: "🌪️ AANDHI TOOFAN:\n1. Ghar ke andar rahein\n2. Ped, hoarding se door\n3. Chhat ka samaan andar rakhein\n4. 112 pe suchna dein",
+    olawrishti: "🧊 OLAWRISHTI:\n1. Sir dhak kar rakhein\n2. Gaadi cover karein\n3. Khet me kaam na karein",
+    heavyrain: "🌧️ HEAVY RAIN + BAADH:\n1. Niche ilaka khali karein\n2. Bijli off karein\n3. Saaf paani rakhein",
+    sookha: "🏜️ SOOKHA / GARMI:\n1. Din me 3-4 litre paani\n2. 12-4 baje dhoop na niklein\n3. Loo lage to ORS",
+    drain: "🚧 DRAIN BLOCKAGE:\n1. Bhare paani se bachein\n2. Nagar Nigam 1916\n3. Dengue se bachav",
+    ganga: "🌊 GANGA:\n1. Gadla paani me na nahayein\n2. Kachra na dalein\n3. Shikayat: 14424",
+    yamuna: "🌊 YAMUNA:\n1. Paani ganda hai\n2. Kachra na dalein\n3. Shikayat: 1800111363",
+    drowning: "💧 DOOBNE SE BACHAV:\n1. Shant rahein\n2. 'Bachao' chillayein\n3. 108 call",
+    boat: "⛵ BOAT DOOBNA:\n1. Life Jacket pehnein\n2. Coast Guard: 1554",
+    earthquake: "🌍 BHUKAMP:\n1. Drop, Cover, Hold\n2. Gas band\n3. Khule maidan",
+    borewell: "🕳️ BOREWELL:\n1. 112 + NDRF\n2. Bachhe se baat\n3. Expert ka intezar",
+    surang: "⛰️ SURANG:\n1. Shant rahein\n2. 3 baar thok kar signal\n3. Torch on",
+    accident: "🚗 ACCIDENT:\n1. 108 + 112\n2. Ghayal ko na hilayein",
+    violence: "🛡️ HINSA:\n1. Surakshit jagah\n2. 112 / 181\n3. Kisi ko batayein",
+    bhikhmanga: "🍞 BEBAS KI MADAD:\n1. 112 / 1098 Childline\n2. Khana de sakte\n3. Shelter ki jankari"
+  };
+  document.getElementById('guideBox').style.display = 'block';
+  document.getElementById('guideBox').innerText = guides[type];
+}
+function getLocation(){
+  if(navigator.geolocation){ navigator.geolocation.getCurrentPosition(()=>alert("Safe hain"),()=>alert("Permission dein")); }
+  else { alert("Support nahi"); }
+}
+</script>
+
+</body>
+</html>
